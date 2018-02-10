@@ -35,7 +35,8 @@ public class BaseStep {
                 break;
             default:
                 System.setProperty("webdriver.chrome.driver", properties.getProperty("webdriver.chrome.driver"));
-                driver = new ChromeDriver(new ChromeOptions().setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"));
+                driver = new ChromeDriver();
+                //driver = new ChromeDriver(new ChromeOptions().setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"));
         }
 
         driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
